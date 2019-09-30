@@ -1,39 +1,25 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "declaration": false,
-    "emitDecoratorMetadata": true,
-    "importHelpers": true,
-    "experimentalDecorators": true,
+    "target": "es5",
     "lib": [
-      "dom",
-      "es2015"
+      "es6",
+      "dom"
     ],
     "module": "commonjs",
     "moduleResolution": "node",
-    "sourceMap": true,
-    "target": "es5",
-    "skipLibCheck": true,
-    "stripInternal": true,
-    "noImplicitAny": false,
-    "types": [
-      "@types/meteor",
-      "@types/mocha",
-      "@types/chai",
-      "@types/sinon"
-    ]
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true
   },
-  "include": [
-    "imports/**/*.ts",
-    "client/**/*.ts",
-    "server/**/*.ts"
-  ],
   "exclude": [
     "node_modules"
   ],
+  "files": [
+    "typings.d.ts"
+  ],
   "compileOnSave": false,
-  "atom": {
-    "rewriteTsconfig": false
+  "angularCompilerOptions": {
+    "genDir": "aot",
+    "skipMetadataEmit": true
   }
 }
