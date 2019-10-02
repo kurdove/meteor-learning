@@ -11,7 +11,8 @@ export class AppComponent {
     parties: Observable<any[]>;
  
     constructor() {
-        this.parties = Parties.find({}).zone();
+        this.parties = MeteorObservable.subscribe('parties').subscribe(() => { this.parties=Parties.find({}).zone(); });
+        // this.parties = Parties.find({}).zone();
         // this.parties = Parties.find({}).pipe(zoneOperator());
     }
 }
