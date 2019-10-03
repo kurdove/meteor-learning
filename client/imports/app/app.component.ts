@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { MeteorObservable, Observable } from 'rxjs';
 import { Parties } from '../../../both/collections/parties.collection';
 // import { zoneOperator } from 'rxjs';
  
